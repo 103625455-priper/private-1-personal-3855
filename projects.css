@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
+}
+.projects {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 10rem 4% 2rem;
+}
+.projects-container {
+  width: 100%; 
+}
+.projects-container h2 {
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tilts-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 2rem 0;
+  gap: 2%;
+  justify-content: center;
+}
+.work-card-div {
+  position: relative;
+  padding: .3rem;
+  width: 35rem;
+}
+.work-card {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  padding: 2rem 1rem 1rem;
+  background: var(--gradient2) padding-box,
+    var(--gradient5) border-box;
+  border: 0.2rem solid transparent;
+  border-radius: 5%;
+}
+.work-card .telegram {
+  position: absolute;
+  top: 1.4rem;
+  right: 1.6rem;
+  font-size: 1.4rem;
+  padding: 0.3rem 0.4rem 0;
+  text-align: center;
+  color: white;
+  background: #0084ff;
+  transition: 0.15s;
+  border: 0.1rem solid #0084ff;
+  border-radius: 25%;
+}
+.work-card .telegram:hover {
+  background: #2d6498;
+  border-color: #2d6498;
+}
+.work-card  h1 {
+  font-size: 2.9rem;
+}
+.work-card  p {
+  font-size: 1.6rem;
+}
+.work-card  p span {
+  display: none;
+}
+.work-card img {
+  padding-top: 1.5rem;
+  border-bottom-right-radius: 5%;
+  border-bottom-left-radius: 5%;
+  width: 100%;
+}
+.tilts-container .work-card p a {
+  color: #1d6eac;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+
+@media (max-width: 1200px) {
+  .projects {
+    padding: 10rem 2% 2rem;
+  }
+  .tilts-container {
+    gap: 1%;
+  }
+}
+
+@media (max-width: 991px) {
+  .tilts-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2rem 0;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .work-card-div {
+    flex: 1;
+    /* width: 27rem; */
+    max-width: 34rem;
+  }
+  .work-card h1 {
+  font-size: 2.2rem;
+  }
+  .work-card p {
+  font-size: 1.5rem;
+  }
+  .tilts-container .work-card p a {
+  font-size: 1.5rem;
+  }
+}
+@media (max-width: 813px) {
+  .tilts-container {
+    gap: 1rem 2%;
+  }
+  .work-card-div {
+    width: 34rem;
+    flex: none;
+    max-width: none;
+  }
+  .work-card-div:nth-child(1) img {
+    padding-top: 0rem;
+  }
+  .work-card-div:last-child {
+    width: 70rem;
+  }
+  .work-card-div:last-child .work-card {
+    display: flex;
+  }
+  .work-card-div:last-child .work-card h1 {
+    display: none;
+  }
+  .work-card-div:last-child .work-card p {
+    display: block;
+    padding-right: 1rem;
+    border-right: .1rem solid var(--main-color);
+    margin-right: 1rem;
+  }
+  .work-card-div:last-child .work-card p span {
+    display: block;
+    font-size: 2.3rem;
+    font-weight: 700;
+  }
+  .work-card-div:last-child .work-card img {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .work-card-div {
+    width: 43%;
+    min-width: 26rem;
+  }
+  .work-card-div:last-child {
+    width: 90%;
+    min-width: 53rem;
+  }
+}
+@media (max-width: 520px) {
+  .work-card-div {
+    width: 80%;
+    }
+  .work-card-div:last-child {
+    width: 80%;
+    min-width: auto;
+  }
+  .work-card-div:last-child .work-card {
+    display: block;
+  }
+  .work-card-div:last-child .work-card h1 {
+    display: block;
+  }
+  .work-card-div:last-child .work-card p {
+    padding-right: 0;
+    border-right: none;
+    margin-right: 0;
+  }
+  .work-card-div:last-child .work-card p span {
+    display: none;
+  }
+  .work-card-div:last-child .work-card img {
+    width: 100%;
+  }
+}
+@media (max-width: 462px) {
+  .work-card-div {
+    width: 90%;
+    }
+  .work-card-div:last-child {
+    width: 90%;
+  }
+}
