@@ -4,31 +4,32 @@ const themeTogg = document.querySelector(".theme-before");
 const opacityTogg = document.querySelector(".opacity-sp");
 let themeMode = localStorage.getItem("Mode");
 
-if (themeMode === "Light") {
-  themeTogg.classList.remove("theme-after");
-  document.body.classList.add("light-theme");
-  document.body.classList.remove("dark-theme");
-  opacityTogg.classList.add("opacity-sp2");
+if (themeMode === "Dark") { // if the guy selected dark...
+  themeTogg.classList.add("theme-after"); // makes toogle btn bg white;
+  document.body.classList.add("dark-theme"); // turn dark mode on;
+  document.body.classList.remove("light-theme"); // turn light mode off;
+  opacityTogg.classList.remove("opacity-sp2"); //changes homepage bg img to white;
 } else {
-  document.body.classList.add("dark-theme");
+  document.body.classList.add("light-theme");
+  opacityTogg.classList.add("opacity-sp2");//homepage img to black(it was Black);
 }
 
 function theme() {
   themeMode = localStorage.getItem("Mode");
 
-  if (themeMode !== "Light") {
-    themeTogg.classList.remove("theme-after");
-    document.body.classList.add("light-theme");
-    document.body.classList.remove("dark-theme");
-    opacityTogg.classList.add("opacity-sp2");
-    localStorage.setItem("Mode", "Light");
+  if (themeMode !== "Dark") { // if it is light.. to turn on dark;
+    themeTogg.classList.add("theme-after"); // makes toogle btn bg white;
+    document.body.classList.add("dark-theme"); // turn dark mode on;
+    document.body.classList.remove("light-theme"); // turn light mode off;
+    opacityTogg.classList.remove("opacity-sp2"); //changes homepage bg img to white;
+    localStorage.setItem("Mode", "Dark"); // save the name dark;
     // console.log(themeMode);
-  } else if (themeMode === "Light") {
-    themeTogg.classList.add("theme-after");
-    document.body.classList.add("dark-theme");
-    document.body.classList.remove("light-theme");
-    opacityTogg.classList.remove("opacity-sp2");
-    localStorage.setItem("Mode", null);
+  } else if (themeMode === "Dark") { // to turn light mode on;
+    themeTogg.classList.remove("theme-after");  // remove white bg from toggle btn;
+    document.body.classList.add("light-theme"); // turn light mode on;
+    document.body.classList.remove("dark-theme"); // turn dark mode off;
+    opacityTogg.classList.add("opacity-sp2");//homepage img to black(it was Black);
+    localStorage.setItem("Mode", null); // unsave the name dark;
     // console.log(themeMode);
   }
   // console.log(themeMode);
