@@ -187,8 +187,20 @@
   opacity: 1;
 }
 .opacity-sp2 {
-  background: transparent !important;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(bg-2.jpg) !important;
+  background-position: center !important;
+  background-size: cover !important;
+  animation: homeOpacity 3s linear 1 !important;
+  opacity: 1;
 }
+
+
 @keyframes homeOpacity {
   0%,
   50%{
