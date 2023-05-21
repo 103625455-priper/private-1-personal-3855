@@ -939,18 +939,26 @@ svg {
 }
 
 .logo .animate,
+.theme-toggle-1 .animate,
 .navbar .animate,
 #menu-icon .animate,
 .home.show-animate .animate{
   animation: showRight 1s ease forwards;
   animation-delay: calc(.3s * var(--i));
 }
+.theme-toggle-1 .theme-toggle .animate {
+  right: -10%;
+  width: 120%;
+  height: 140%;
+  top: -18%;
+}
 
-.animate.scroll {
+.animate.scroll { /* gets the rest ( sections exept the home swction ) */
   transition: 1s ease;
   transition-delay: calc(.3s / var(--i));
   animation: none;
 }
+
 .header.sticky .animate,
 section:nth-child(3) .animate.scroll,/*B/C IT IS ANIMATE.SCROLL..GETS ALL EXEPT HOME & HEADER*/
 section:nth-child(5) .animate.scroll,
