@@ -953,7 +953,7 @@ svg {
   top: -18%;
 }
 
-.animate.scroll { /* gets the rest ( sections exept the home swction ) */
+.animate.scroll { /* gets the rest ( sections exept the home section ) */
   transition: 1s ease;
   transition-delay: calc(.3s / var(--i));
   animation: none;
