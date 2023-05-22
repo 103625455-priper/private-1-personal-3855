@@ -1014,12 +1014,13 @@ section:nth-child(5) .animate.scroll,
   }
 }
 
+/*
 @media (max-width: 1472px) {
   .about .about-hid-text {
     visibility: visible;
     display: none;
   }
-}
+} */
 
 @media (max-width: 1200px) {
   html {
