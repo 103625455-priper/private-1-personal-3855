@@ -196,10 +196,9 @@
   background: url(bg-2.jpg) !important;
   background-position: center !important;
   background-size: cover !important;
-  animation: homeOpacity 3s linear 1 !important;
+  animation: homeOpacity 3.5s linear 1 !important;
   opacity: 1;
 }
-
 
 @keyframes homeOpacity {
   0%,
@@ -683,7 +682,7 @@ circle {
     stroke-dashoffset: 430;
   }
   100% {
-    stroke-dashoffset: 150;
+    stroke-dashoffset: 20; /* 98%  changed*/
   }
 }
 @keyframes animCircle-2 {
@@ -691,7 +690,7 @@ circle {
     stroke-dashoffset: 430;
   }
   100% {
-    stroke-dashoffset: 245.1;
+    stroke-dashoffset: 30.1; /* 93% changed*/
   }
 }
 @keyframes animCircle-3 {
@@ -699,7 +698,7 @@ circle {
     stroke-dashoffset: 430;
   }
   100% {
-    stroke-dashoffset: 322.5;
+    stroke-dashoffset: 38.7; /* 91% changed*/
   }
 }
 
@@ -965,12 +964,11 @@ svg {
   top: -18%;
 }
 
-.animate.scroll { /* gets the rest ( sections exept the home section ) */
+.animate.scroll { /* gets the rest ( sections exept the home swction ) */
   transition: 1s ease;
   transition-delay: calc(.3s / var(--i));
   animation: none;
 }
-
 .header.sticky .animate,
 section:nth-child(3) .animate.scroll,/*B/C IT IS ANIMATE.SCROLL..GETS ALL EXEPT HOME & HEADER*/
 section:nth-child(5) .animate.scroll,
@@ -1073,6 +1071,10 @@ section:nth-child(5) .animate.scroll,
     left: auto;
     right: 12.5rem;
   }
+/*   .theme-icon .bx-sun {
+    margin-bottom: -0.1rem;
+    margin-right: -0.1rem;
+  } */
   #menu-icon {
     display: block;
   }
@@ -1144,7 +1146,7 @@ section:nth-child(5) .animate.scroll,
     height: 100px;
   }
   circle {
-    stroke-dasharray: 410;
+    stroke-dasharray: 360; /* changed */
     r: 58px;
   }
 }
