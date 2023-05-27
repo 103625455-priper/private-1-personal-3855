@@ -1,4 +1,13 @@
-var VanillaTilt = (function () {
+const wWidth = window.screen.width;
+window.onload = () => {
+  if (wWidth > 1221) {
+    divTilt ();
+  } 
+};
+
+function divTilt ()
+{
+  var VanillaTilt = (function () {
 'use strict';
 
 /**
@@ -496,3 +505,4 @@ if (typeof document !== "undefined") {
 return VanillaTilt;
 
 }());
+}
