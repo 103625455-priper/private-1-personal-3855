@@ -61,6 +61,8 @@
   window.onload = () => {
     sections.forEach(sec => {
       let id = sec.getAttribute('id');
+      startSlide();
+
       if (id === 'home') {
         sec.classList.add('home-Opacity');
         /* opacityTogg.classList.add('span-active'); */
@@ -90,9 +92,10 @@
         if (id === 'skills') {
           sec.classList.add('circle-animate');
         }
+
         if (id === 'home') {
           sec.classList.add('home-Opacity');
-        }
+        };
 
       }
       //if want to animation that repeats on scroll use this 
@@ -131,4 +134,35 @@
     footer.classList.toggle('show-animate', this.innerHeight + 13 + this.scrollY >= document.scrollingElement.scrollHeight);
     /* console.log(this.innerHeight, this.scrollY, document.scrollingElement.scrollHeight); */
   };
+
+ 
+
+  function startSlide() {
+
+    let slideIndex = 0;
+    let width = window.screen.width;
+    const testSlider = document.querySelector('.slider');
+
+    if (width <= 768) {
+       slideInterval = setInterval(() => {
+        slide();
+      }, 4000);
+
+      function slide() {
+        slideIndex++;
+
+        if (slideIndex > 2) {
+          slideIndex = 0;
+          testSlider.style.transition = "none";
+        }
+
+        testSlider.style.transform =
+          "translate(" + slideIndex * -33.3 + "%)";
+        setTimeout(() => {
+          testSlider.style.transition = "all 0.5s";
+        }, 1500);
+      }
+    }
+  }
+
 
