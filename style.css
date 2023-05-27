@@ -362,7 +362,7 @@
   transition: .5s;
 }
 .home-sci a:hover i {
-  color: var(--text-color);
+  color: #eddede;
 }
 .home-sci a:hover::before {
   width: 100%;
