@@ -58,18 +58,9 @@
   let number1 = document.getElementById("number-circle");
   let opaOnScroll = document.getElementById('home');
 
-  window.onload = () => {
-    sections.forEach(sec => {
-      let id = sec.getAttribute('id');
-      startSlide();
-
-      if (id === 'home') {
-        sec.classList.add('home-Opacity');
-        /* opacityTogg.classList.add('span-active'); */
-        /* console.log(opaOnScroll.getAttribute('class')); */ // === home show-animate home-Opacity;
-      }
-    })
-  }
+   window.onload = (startSlide()/*,
+   console.log('startSlide') */
+  );
 
 
   window.onscroll = () => {
