@@ -611,15 +611,7 @@
 .skill-box .skills-content:hover::before {
   width: 100%;
 } */
-.prev-webs-h2 {
-  margin: 1.5rem 0 0.5rem 14rem;
-  font-size: 2.5rem;
-  display: inline-block;
-  position: relative;
-}
-.prev-webs-h2 img {
-  width: 4rem;
-}
+
 .circle-container {
   position: relative;
   /*background: yellowgreen;*/
@@ -1191,9 +1183,6 @@ section:nth-child(5) .animate.scroll,
     margin-top: 2rem;
     margin-bottom: 2rem;
     text-align: center;
-  }
-  .prev-webs-h2 {
-    margin: 1.5rem 0 0.5rem 12rem;
   }
 }
 
