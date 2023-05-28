@@ -1008,31 +1008,6 @@ section:nth-child(5) .animate.scroll,
 
 /*BREAK POINTS */
 
-@media (max-height: 915px) {
-  .home {
-    min-height: 95rem;
-  }
-}
-
-@media (max-height: 900px) {
-  .home {
-    min-height: 100vh;
-  }
-}
-@media (max-height: 680px) {
-  .home {
-    min-height: 80rem;
-  }
-}
-
-/*
-@media (max-width: 1472px) {
-  .about .about-hid-text {
-    visibility: visible;
-    display: none;
-  }
-} */
-
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
@@ -1196,6 +1171,12 @@ section:nth-child(5) .animate.scroll,
   }
   .home-content h1 {
     font-size: 6rem;
+  }
+  .home-content {
+    margin-top: -14rem;
+  }
+  .home-sci {
+    bottom: 12rem;
   }
   .education {
     padding: 10rem 4% 5rem 5%;
