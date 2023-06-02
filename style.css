@@ -82,14 +82,14 @@
     position: relative;
   }
   .logo-btn {
-    padding: 1.2rem;
+    padding: 1rem;
     background: var(--main-color);
     display: flex;
     align-items: center;
     border-radius: 2rem;
     color: white;
     font-weight: 600;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     transition: .15s;
     cursor: pointer;
   }
@@ -97,7 +97,7 @@
     position: absolute;
     display: none;
     top: 29%;
-    right: 7%;
+    right: 5%;
     color: greenyellow;
     font-weight: 500;
     font-size: 2rem;
@@ -136,7 +136,7 @@
 
   .theme-toggle-1 {
     position: absolute;
-    left: 27rem; /*changed new*/
+    left: 28rem; /*changed new*/
     border: .2rem solid var(--text-color);
     border-radius: 3rem;
     padding: .2rem .3rem;
