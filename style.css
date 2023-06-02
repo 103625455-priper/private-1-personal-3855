@@ -82,20 +82,21 @@
     position: relative;
   }
   .logo-btn {
-    padding: 1rem;
+    padding: 1.2rem;
     background: var(--main-color);
     display: flex;
     align-items: center;
     border-radius: 2rem;
     color: white;
     font-weight: 600;
+    font-size: 1.7rem;
     transition: .15s;
     cursor: pointer;
   }
   .logo-btn .bx {
     position: absolute;
     display: none;
-    top: 26%;
+    top: 29%;
     right: 7%;
     color: greenyellow;
     font-weight: 500;
