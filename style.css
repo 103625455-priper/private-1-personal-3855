@@ -78,15 +78,64 @@
   .header.sticky {
     background: var(--bg-color-2);
   }
-  .logo {
+  .logo{
     position: relative;
-    font-size: 2.5rem;
-    color: var(--text-color);
-    font-weight: 600;
   }
+  .logo-btn {
+    padding: 1rem;
+    background: var(--main-color);
+    display: flex;
+    align-items: center;
+    border-radius: 2rem;
+    color: white;
+    font-weight: 600;
+    transition: .15s;
+    cursor: pointer;
+  }
+  .logo-btn .bx {
+    position: absolute;
+    display: none;
+    top: 26%;
+    right: 7%;
+    color: greenyellow;
+    font-weight: 500;
+    font-size: 2rem;
+    transition: .3s;
+  }
+  .logo:hover .bx {
+    display: inline-block;
+    opacity: 1;
+    right: 5%;
+    animation: smileBlink 2s linear 1;
+  }
+
+  @keyframes smileBlink {
+    0%,
+    15% {
+      opacity: 1;
+    }
+    20% {
+      opacity: 0;
+    }
+    25%,
+    30% {
+      opacity: 1;
+    }
+    35% {
+      opacity: 0;
+    }
+    40%,
+    100% {
+      opacity: 1;
+    }
+  }
+  .logo:hover .logo-btn {
+    padding-right: 3rem;
+  }
+
   .theme-toggle-1 {
     position: absolute;
-    left: 25rem;
+    left: 27rem; /*changed new*/
     border: .2rem solid var(--text-color);
     border-radius: 3rem;
     padding: .2rem .3rem;
@@ -390,7 +439,6 @@
 } */
 
 
-
 /* <!--about section design-->*/
 /* <!--about section design-->*/
 .about {
@@ -561,6 +609,7 @@
   display: inline-block;
   left: 50%;
   transform: translateX(-50%);
+  /* margin-bottom: 0rem; changed*/
 }
 
 .skills .skills-row {
@@ -611,7 +660,6 @@
 .skill-box .skills-content:hover::before {
   width: 100%;
 } */
-
 .circle-container {
   position: relative;
   /*background: yellowgreen;*/
@@ -728,9 +776,6 @@ svg {
   height: 100%;
 }
 
-.skills-content .progress h3 span{
-  color: var(--text-color);
-}
 
 /* <!--contact section design--> */
 /* <!--contact section design--> */
@@ -1005,7 +1050,7 @@ section:nth-child(5) .animate.scroll,
     font-size: 55%;
   }
   .header .theme-toggle-1 {
-    left: 21rem;
+    left: 26rem; /*changed new*/
   }
 }
 
@@ -1018,7 +1063,7 @@ section:nth-child(5) .animate.scroll,
     padding: 10rem 4% 2rem;
   }
   .header .theme-toggle-1 {
-    left: 18rem;
+    left: 23rem; /*changed new*/
   }
   .home {
     padding: 0 4%;
@@ -1035,7 +1080,7 @@ section:nth-child(5) .animate.scroll,
 
 @media (max-width: 813px) {
   .header .theme-toggle-1 {
-    left: 16rem;
+    left: 22rem; /*changed new*/
   }
   .skills .skills-row {
     padding: 0 5%;
