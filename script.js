@@ -7,11 +7,11 @@
   if (themeMode === "Dark") { // if the guy selected dark...
     themeTogg.classList.add("theme-after"); // makes toogle btn bg white;
     document.body.classList.add("dark-theme"); // turn dark mode on;
-    document.body.classList.remove("light-theme"); // turn light mode off;
-    opacityTogg.classList.remove("opacity-sp2"); //removes white bg from home page;
+    document.body.classList.remove("light-theme"); // turn off light mode;
+    opacityTogg.classList.add("opacity-sp2"); //adds black bg to the home page;
   } else {
-    document.body.classList.add("light-theme");
-    opacityTogg.classList.add("opacity-sp2");//homepage img to black(it was Black);
+    document.body.classList.add("light-theme"); // turn on light mode;
+    opacityTogg.classList.remove("opacity-sp2");//removes black bg from the home page;
   }
 
   function theme() {
@@ -21,7 +21,7 @@
       themeTogg.classList.add("theme-after"); // makes toogle btn bg white;
       document.body.classList.add("dark-theme"); // turn dark mode on;
       document.body.classList.remove("light-theme"); // turn light mode off;
-      opacityTogg.classList.remove("opacity-sp2"); //removes white bg from home page;
+      opacityTogg.classList.add("opacity-sp2"); //adds black bg to the home page;
       localStorage.setItem("Mode", "Dark"); // save the name dark;
       /* console.log(themeMode);
       console.log('it was null. so save to Dark'); */
@@ -30,7 +30,7 @@
       themeTogg.classList.remove("theme-after");  // remove white bg from toggle btn;
       document.body.classList.add("light-theme"); // turn light mode on;
       document.body.classList.remove("dark-theme"); // turn dark mode off;
-      opacityTogg.classList.add("opacity-sp2");//homepage img to black(it was Black);
+      opacityTogg.classList.remove("opacity-sp2");//removes black bg from the home page;
       localStorage.setItem("Mode", null); // unsave the name dark;
       /* console.log(themeMode);
       console.log('it was dark. so Save to null'); */
@@ -58,9 +58,12 @@
   let number1 = document.getElementById("number-circle");
   let opaOnScroll = document.getElementById('home');
 
-   window.onload = (startSlide()/*,
-   console.log('startSlide') */
+  window.onload = (startSlide()
+  /* console.log('startSlide') */
   );
+
+
+
 
 
   window.onscroll = () => {
@@ -101,10 +104,10 @@
     });
 
     if (opaOnScroll.getAttribute('class') !== 'home show-animate home-Opacity') { 
-      opacityTogg.classList.remove("opacity-sp2"); //removes white bg from home page;
+      opacityTogg.classList.add("opacity-sp2");//adds black bg to the home page;
       /* console.log('removed by scroll'); */
     } else if (opaOnScroll.getAttribute('class') === 'home show-animate home-Opacity' && themeMode !== 'Dark') { /* if we don't re-declare getitems, this argument cannot get the valıe of themeMode correctly */
-      opacityTogg.classList.add('opacity-sp2'); // adds white bg to home page;
+      opacityTogg.classList.remove('opacity-sp2'); //removes black bg from the home page;
       /* console.log('added by scroll'); */
     }
     
@@ -127,6 +130,7 @@
   };
 
  
+  
 
   function startSlide() {
 
@@ -155,5 +159,3 @@
       }
     }
   }
-
-
