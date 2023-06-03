@@ -1,0 +1,111 @@
+html {
+  font-size: 100% !important;
+}
+.thank-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+.thank-div .thank-box {
+  background: var(--bg-color-2);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2rem 2rem;
+  transform: scale(0.1);
+  visibility: hidden;
+  animation: thankScaleUp linear 1s forwards;
+  text-align: center;
+}
+.thank-div {
+  position: relative;
+  max-width: 30rem;
+}
+.thank-box a .bx-check {
+  font-size: 5.5rem;
+  color: white;
+  background: var(--main-color);
+  border-radius: 50%;
+  padding: 0.5rem;
+  margin-top: -2.7rem;
+  margin-bottom: 2rem;
+}
+.thank-box h1 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-size: 2.1rem;
+}
+.thank-box p {
+  margin-bottom: 3rem;
+}
+.thank-box button {
+  padding: 0.7rem 9rem;
+  color: white;
+  background: var(--main-color);
+  font-size: 1.5rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+.thank-box button:hover {
+  opacity: 0.9;
+}
+
+.tnx-footer {
+  background: var(--bg-color-2);
+  padding: 1.5rem 1rem;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  text-align: center;
+}
+.tnx-footer-text {
+  position: relative;
+}
+.tnx-footer-text::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color-2);
+  animation: tnxFooterAnim linear 2s forwards;
+}
+
+@media (max-width: 520px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* ANIMATIONS */
+
+@keyframes thankScaleUp {
+  0%,
+  50% {
+    visibility: hidden;
+    transform: scale(0.1);
+  }
+  100% {
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+
+@keyframes tnxFooterAnim {
+  0%,
+  60% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
