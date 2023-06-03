@@ -58,9 +58,16 @@
   let number1 = document.getElementById("number-circle");
   let opaOnScroll = document.getElementById('home');
 
-  window.onload = (startSlide()
+   window.onload = (
+    startSlide()
   /* console.log('startSlide') */
   );
+  sections.forEach(sec =>  {
+    let id = sec.getAttribute('id'); 
+     if (id === 'home') {
+          sec.classList.add('home-Opacity');
+        };
+  });
 
 
 
@@ -104,10 +111,10 @@
     });
 
     if (opaOnScroll.getAttribute('class') !== 'home show-animate home-Opacity') { 
-      opacityTogg.classList.add("opacity-sp2");//adds black bg to the home page;
+      opacityTogg.classList.remove("opacity-sp2");//adds black bg to the home page;
       /* console.log('removed by scroll'); */
-    } else if (opaOnScroll.getAttribute('class') === 'home show-animate home-Opacity' && themeMode !== 'Dark') { /* if we don't re-declare getitems, this argument cannot get the valıe of themeMode correctly */
-      opacityTogg.classList.remove('opacity-sp2'); //removes black bg from the home page;
+    } else if (opaOnScroll.getAttribute('class') === 'home show-animate home-Opacity' && themeMode === 'Dark') { /* if we don't re-declare getitems, this argument cannot get the valıe of themeMode correctly */
+      opacityTogg.classList.add('opacity-sp2'); //removes black bg from the home page;
       /* console.log('added by scroll'); */
     }
     
