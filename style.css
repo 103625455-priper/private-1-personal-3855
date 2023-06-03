@@ -47,7 +47,7 @@
   html {
     font-size: 62.5%;
     overflow-x: hidden;
-    transition: 0s !important;
+    transition: 0.15s;
   }
 
   body {
@@ -96,8 +96,8 @@
   .logo-btn .bx {
     position: absolute;
     display: none;
-    top: 29%;
-    right: 5%;
+    top: 27%;
+    right: -5%;
     color: greenyellow;
     font-weight: 500;
     font-size: 2rem;
@@ -223,17 +223,17 @@
   align-items: center;
   padding: 0 9%;
 }
-.home-Opacity .opacity-sp {
+.opacity-sp {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: url(bg.png);
+  background: url(bg-2.jpg);
   background-position: center;
   background-size: cover;
-  animation: homeOpacity 2s linear 1;
+  animation: homeOpacity 3.5s linear 1;
   opacity: 1;
 }
 .opacity-sp2 {
@@ -243,10 +243,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url(bg-2.jpg) !important;
+  background: url(bg.png) !important;
   background-position: center !important;
   background-size: cover !important;
-  animation: homeOpacity 3.5s linear 1 !important;
+  animation: homeOpacity 2s linear 1 !important;
   opacity: 1;
 }
 
@@ -888,7 +888,7 @@ svg {
   transform: translate(-50%, -50%) scale(1);
 }
 .contact .pop-up .bx {
-  color: var(--text-color-2);
+  color: white;
   background: var(--main-color);
   border: 0.1rem solid transparent;
   border-radius: 50%;
@@ -911,7 +911,7 @@ svg {
   width: 31rem;
   height: 5rem;
   margin-bottom: 2rem;
-  color: var(--text-color);
+  color: white;
   background: var(--main-color);
   border-radius: 0.5rem;
   border-style: none;
