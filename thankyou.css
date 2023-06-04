@@ -19,7 +19,7 @@ html {
   padding: 0 2rem 2rem;
   transform: scale(0.1);
   visibility: hidden;
-  animation: thankScaleUp linear 1s forwards;
+  animation: thankScaleUp linear .5s forwards;
   text-align: center;
 }
 .thank-div {
