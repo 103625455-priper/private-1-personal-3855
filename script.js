@@ -58,10 +58,10 @@
   let number1 = document.getElementById("number-circle");
   let opaOnScroll = document.getElementById('home');
 
-   window.onload = (
-    startSlide()
-  /* console.log('startSlide') */
-  );
+  
+  // on load
+  startSlide();
+
   sections.forEach(sec =>  {
     let id = sec.getAttribute('id'); 
      if (id === 'home') {
@@ -83,11 +83,13 @@
       let id = sec.getAttribute('id');
     
       if(top >= offset && top < offset + height) {
+        
         //active navbar links
         navLinks.forEach(links => {
           links.classList.remove('active');
           document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
         });
+
         // active section for animation
         sec.classList.add('show-animate');
         if (id === 'skills') {
@@ -133,6 +135,7 @@
     let footer =  document.querySelector('footer');
 
     footer.classList.toggle('show-animate', this.innerHeight + 13 + this.scrollY >= document.scrollingElement.scrollHeight);
+
     /* console.log(this.innerHeight, this.scrollY, document.scrollingElement.scrollHeight); */
   };
 
@@ -144,7 +147,8 @@
     let slideIndex = 0;
     let width = window.screen.width;
     const testSlider = document.querySelector('.slider');
-
+    
+    
     if (width <= 768) {
        slideInterval = setInterval(() => {
         slide();
@@ -166,3 +170,7 @@
       }
     }
   }
+
+
+
+
