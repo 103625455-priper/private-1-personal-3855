@@ -16,6 +16,7 @@
   /** General theme **/
   :root {
     --main-color: #915eff;
+    --main-color-2: #68d381; /* useed by thankyou check and btn */
     --gradient1: linear-gradient(90deg, #915eff, darkblue);/*Not in use*/
     --gradient3: linear-gradient(101deg,#00dbde,#fc00ff);/* used by bx buttons */
     --gradient5: linear-gradient(90deg, #1d6eac, #9124c8);/*only by projects*/
@@ -41,8 +42,6 @@
     --text-color-2: white; /** used by bx buttons on hover*/
     --gradient2: linear-gradient(#000000, #000000); /* projects & buttons background*/
    }
-
-
 
   html {
     font-size: 62.5%;
@@ -270,14 +269,16 @@
   font-weight: 800;
   line-height: 1.3;
 }
-.home-content h1 span {
+.home-content h1 .tr-ho-1 {
   color: var(--main-color);
 }
 .home-content .text-animate {
   position: relative;
-  width: 32.8rem;
+  width: fit-content;
+  padding-right: .5rem;
+  /* width: 32.8rem; */
 }
-.home-content .text-animate h3 {
+.home-content .text-animate .gen-h3 {
   font-size: 3.2rem;
   font-weight: 700;
   color: transparent;
@@ -285,14 +286,29 @@
   background-image: linear-gradient(var(--text-color),var(--text-color));
   background-repeat: no-repeat;
   -webkit-background-clip: text;
-  background-position: -33rem 0;
+  background-position: -32.5rem 0;
 }
 
-.home.show-animate .home-content .text-animate h3 {
+.home.show-animate .home-content .text-animate .gen-h3 {
   animation: homeBgText 8s linear infinite;
   animation-delay: 2s;
-
 }
+.tr-ho-2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: .7px var(--text-color);
+  background-image: linear-gradient(var(--text-color),var(--text-color));
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-position: -26rem 0;
+  display: none;
+}
+.home.show-animate .home-content .text-animate .tr-ho-2 {
+  animation: homeBgTextTR 8s linear infinite;
+  animation-delay: 2s;
+}
+
 .home-content .text-animate h3::before {
   content: '';
   position: absolute;
@@ -520,6 +536,7 @@
   flex-direction: column;
   min-height: auto;
   padding-bottom: 5rem;
+  background: var(--bg-color-2);
 }
 .education .education-row {
   display: flex;
@@ -604,7 +621,6 @@
 .skills {
   min-height: auto;
   padding: 6rem 0% 2rem;
-  background: var(--bg-color-2);
 }
 .skills .heading {
   display: inline-block;
@@ -1013,14 +1029,16 @@ svg {
   top: -18%;
 }
 
-.animate.scroll { /* gets the rest ( sections exept the home swction ) */
+.animate.scroll { /* gets the rest ( sections exept the home swction ) */ 
   transition: 1s ease;
   transition-delay: calc(.3s / var(--i));
   animation: none;
 }
 .header.sticky .animate,
-section:nth-child(3) .animate.scroll,/*B/C IT IS ANIMATE.SCROLL..GETS ALL EXEPT HOME & HEADER*/
-section:nth-child(5) .animate.scroll,
+/*B/C IT IS ANIMATE.SCROLL..GETS ALL EXEPT HOME & HEADER*/
+.about .animate.scroll,
+.education .animate.scroll,
+.projects .animate.scroll,
 .footer .animate.scroll {
   background: var(--bg-color-2);
 }
@@ -1034,6 +1052,7 @@ section:nth-child(5) .animate.scroll,
 }
 
 .about.show-animate .animate.scroll,
+.interviews.show-animate .animate.scroll,
 .education.show-animate .animate.scroll,
 .skills.show-animate .animate.scroll,
 .projects.show-animate .animate.scroll,
@@ -1041,6 +1060,9 @@ section:nth-child(5) .animate.scroll,
 .footer.show-animate .animate.scroll {
   transition-delay: calc(.3s * var(--i));
   width: 0;
+}
+.interviews .animate.scroll {
+  visibility: hidden;
 }
 
 
@@ -1051,20 +1073,23 @@ section:nth-child(5) .animate.scroll,
     font-size: 55%;
   }
   .header .theme-toggle-1 {
-    left: 26rem; /*changed new*/
+    left: 26rem;
   }
 }
 
 @media (max-width: 991px) {
-  /*
+  
   .header { 
-    padding: 2rem 4%;
-  }*/
+    padding: 1rem 6%;
+  }
+  .navbar a {
+    margin-left: 2.8rem;
+  }
   section {
     padding: 10rem 4% 2rem;
   }
   .header .theme-toggle-1 {
-    left: 23rem; /*changed new*/
+    left: 19rem;
   }
   .home {
     padding: 0 4%;
@@ -1081,7 +1106,10 @@ section:nth-child(5) .animate.scroll,
 
 @media (max-width: 813px) {
   .header .theme-toggle-1 {
-    left: 22rem; /*changed new*/
+    left: 16rem;
+  }
+  .navbar a {
+    margin-left: 2.5rem;
   }
   .skills .skills-row {
     padding: 0 5%;
@@ -1230,6 +1258,9 @@ section:nth-child(5) .animate.scroll,
     margin-bottom: 2rem;
     text-align: center;
   }
+  .interviews .animate.scroll {
+    visibility: visible;
+  }
 }
 
 @media (max-width: 371px) {
@@ -1253,7 +1284,15 @@ section:nth-child(5) .animate.scroll,
 
 @keyframes homeBgText {
   0%,10%,100% {
-    background-position: -33rem 0;
+    background-position: -32.5rem 0;
+  }
+  65%,85% {
+    background-position: 0 0;
+  }
+}
+@keyframes homeBgTextTR {
+  0%,10%,100% {
+    background-position: -26rem 0;
   }
   65%,85% {
     background-position: 0 0;
