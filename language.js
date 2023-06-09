@@ -20,7 +20,7 @@
  function languageEN() {
   languageSave = localStorage.getItem("language");
   localStorage.removeItem("language");
-  window.location.replace("http://127.0.0.1:5500/index.html");
+  window.location.replace("https://www.ibrahimali.net");
  }
 
 function languageTR() {
