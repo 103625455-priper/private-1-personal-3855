@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="style.css" class="stylesheet-1" />
     <link rel="stylesheet" href="thankyou.css" class="stylesheet-1" />
-    
+
     <link rel="icon" type="jpg" href="check-2.jpg" />
 
     <!--Box icons-->
@@ -18,15 +18,21 @@
     />
   </head>
   <body>
+    <!-- payment design -->
+
     <div class="thank-container">
       <div class="thank-div">
         <div class="thank-box">
           <a><i class="bx bx-check"></i></a>
-          <h1 class="">Completed !</h1>
-          <p>I am deeply grateful for the support you have given to me. I am
+          <h1 class="tr-pa-1">Completed !</h1>
+          <p class="tr-pa-2">
+            I am deeply grateful for the support you have given to me. I am
             forever grateful for your belief in my potential. Thank you from the
-            depths of my heart.</p>
-          <a href="https://www.ibrahimali.net"><button>Ok</button></a>
+            depths of my heart.
+          </p>
+          <a href="https://www.ibrahimali.net"
+            ><button class="tr-pa-3">Ok</button></a
+          >
         </div>
       </div>
     </div>
@@ -34,7 +40,9 @@
     <!-- footer design-->
     <footer class="tnx-footer">
       <div class="tnx-footer-text">
-        <p>Copyright &copy; 2023 by Ibrahim Ali | All Rights Reserved.</p>
+        <p class="tr-pa-4">
+          Copyright &copy; 2023 by Ibrahim Ali | All Rights Reserved.
+        </p>
       </div>
     </footer>
   </body>
@@ -49,6 +57,19 @@
       document.body.classList.remove("light-theme"); // turn light mode off;page;
     } else {
       document.body.classList.add("light-theme");
+    }
+  </script>
+  <script>
+    languageSave = localStorage.getItem("language");
+    if (languageSave === "turkish") {
+      // /* after payment design */
+      document.querySelector(".tr-pa-1").innerText = "Tamamlanmış !";
+      document.querySelector(".tr-pa-2").innerText =
+        "Bana verdiğiniz destek için derinden minnettarım. Potansiyelime olan inancınız için sonsuza dek minnettarım. Kalbimin derinliklerinden teşekkür ederim.";
+      document.querySelector(".tr-pa-3").innerText = "Tamam";
+      document.querySelector(
+        ".tr-pa-4"
+      ).innerHTML = `Telif Hakkı &copy; 2023 İbrahim Ali tarafından | Tüm Hakları Saklıdır.`;
     }
   </script>
 </html>
