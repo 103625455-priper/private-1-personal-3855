@@ -1,0 +1,89 @@
+.language {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  top: 80%;
+  right: 0%;
+  width: 3.5rem;
+  z-index: 100;
+  background: #a39c9c;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  transition: .25s;
+}
+.languageWidth {
+  width: 3.5rem;
+}
+.languagePop {
+  animation: languagePop linear 5s forwards;
+}
+.language:hover {
+  width: 15rem;
+}
+.ln-arrow {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.ln-arrow .bx {
+  font-size: 4rem;
+  color: var(--bg-color);
+  transition: .15s;
+}
+.ln-arrow .ln-right {
+  display: none;
+  transition: .15s;
+}
+.language:hover .ln-right {
+  display: inline-block;
+}
+.language:hover .ln-left {
+  display: none;
+}
+.ln-btns {
+  display: flex;
+  gap: .4rem;
+  flex-direction: column;
+  padding: .5rem;
+}
+.ln-btn {
+  font-size: 2rem;
+  color: var(--bg-color-2);
+  background: transparent; 
+  padding: .5rem;
+  cursor: pointer;
+  border-bottom: 0.1rem solid var(--main-color);
+}
+@keyframes languagePop {
+  0%,50% {
+    width: 3.5rem;
+  }
+  55% {
+    width: 15rem;
+  }
+  60% {
+    opacity: 1;
+  }
+  62% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+  }
+  67% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  95% {
+    width: 15rem;
+  }
+}
+@keyframes languagePop2 {
+  100% {
+    width: 15rem;
+  }
+}
