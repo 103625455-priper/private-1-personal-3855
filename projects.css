@@ -10,7 +10,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  background: var(--bg-color);
+  background: var(--bg-color-2);
   color: var(--text-color);
   padding: 10rem 4% 2rem;
 }
@@ -58,12 +58,12 @@
   border: 0.1rem solid #0084ff;
   border-radius: 25%;
 }
+.work-card .telegram .bx {
+  color: white;/* new changed */
+}
 .work-card .telegram:hover {
   background: #2d6498;
   border-color: #2d6498;
-}
-.work-card .telegram .bx {
-  color: white;
 }
 .work-card  h1 {
   font-size: 2.9rem;
