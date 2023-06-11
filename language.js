@@ -3,10 +3,20 @@
  const langAnim = document.querySelector(".language");
  const langRight = document.querySelector(".ln-right");
  const langLeft = document.querySelector(".ln-left");
+ const langTRbtn = document.querySelector(".turkish");
 
  let langIndex = 0;
  langRight.addEventListener("click", () => { languageHide()});
  langLeft.addEventListener("click", () => {languageHide()});
+
+ // Türkçe click
+ langTRbtn.addEventListener("click", () => {
+  langAnim.classList.remove("languageUNHIDE");
+  langAnim.classList.add("languageHIDE");
+  langRight.style.display = "none";
+  langLeft.style.display = "inline-block";
+  langIndex = 0;
+ });
 
 function languageHide() {
 
@@ -211,6 +221,5 @@ document.querySelector(".tr-co-4").innerHTML = `Tamam`;
 // <!-- footer design-->
 document.querySelector(".tr-fo-1").innerHTML = `Telif Hakkı &copy; 2023 İbrahim Ali tarafından | Tüm Hakları Saklıdır.`;
 
-window.location.replace("https://www.ibrahimali.net");
 languageSave = localStorage.getItem("language");
 };
