@@ -163,7 +163,7 @@ geliştirme becerilerine sahibim.`;
 // <!--skills section design-->
 document.querySelector(".skills .heading").innerHTML = `<span>Becerilerim</span
 ><span class="animate scroll" style="--i: 1"></span>`;
-document.querySelector(".testimonials").innerHTML = `Görüşler<span class="animate scroll" style="--i: 9.5"></span>`;
+document.querySelector(".testimonials").innerHTML = `Görüşler<span class="animate scroll" style="--i: 5"></span>`;
 document.querySelector(".tr-te-1").innerHTML = `Bundan sonra büyük başarılara ulaşacağınızı ve tekrar
 görüşeceğimizi umarım.`;
 document.querySelector(".tr-te-2").innerHTML = `Güçlü kal. İstediğin zaman, benimle iletişime geçebilirsin.`;
