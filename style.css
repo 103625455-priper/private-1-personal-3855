@@ -673,26 +673,10 @@
   opacity: 1;
 }
 .circle-animate .skils-column:nth-child(2) .circle-container {
-  animation: shadowVis-2 linear 2s forwards;
+  animation: shadowVis-2 linear 1s forwards;
 }
 .circle-animate .skils-column:nth-child(3) .circle-container {
-  animation: shadowVis-2 linear 3s forwards;
-}
-@keyframes shadowVis-2 {
-  0%,50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes shadowVis-3 {
-  0%,67% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  animation: shadowVis-2 linear 1.4s forwards;
 }
 .outer-circle {
   width: fit-content;
@@ -732,28 +716,28 @@ circle {
   r: 69px;
 }
 .circle-animate #number-circle1 {
-  animation: animNumb-1 1s linear forwards;
+  animation: animNumb-1 .9s linear forwards;
 }
 .circle-animate #number-circle2 {
-  animation: animNumb-1 2s linear forwards;
+  animation: animNumb-1 1.4s linear forwards;
 }
 .circle-animate #number-circle3 {
-  animation: animNumb-1 3s linear forwards;
+  animation: animNumb-1 1.8s linear forwards;
 }
 
 
 .circle-animate .circle-1 {
-  animation: animCircle-1 1s linear forwards;
+  animation: animCircle-1 .9s linear forwards;
 }
 .circle-animate .circle-2 {
-  animation: animCircle-2 2s linear forwards;
+  animation: animCircle-2 1.4s linear forwards;
 }
 .circle-animate .circle-3 {
-  animation: animCircle-3 3s linear forwards;
+  animation: animCircle-3 1.8s linear forwards;
 }
 /* take it down later*/
 @keyframes animCircle-1 {
-  0%,30%{
+  0%,25%{
     stroke-dashoffset: 430;
   }
   100% {
@@ -761,7 +745,7 @@ circle {
   }
 }
 @keyframes animCircle-2 {
-  0%,50%{
+  0%,25%{
     stroke-dashoffset: 430;
   }
   100% {
@@ -769,7 +753,7 @@ circle {
   }
 }
 @keyframes animCircle-3 {
-  0%,67%{
+  0%,35%{
     stroke-dashoffset: 430;
   }
   100% {
@@ -778,7 +762,7 @@ circle {
 }
 
 @keyframes animCircle-21 {
-  0%,30%{
+  0%,20%{
     stroke-dashoffset: 400;
   }
   100% {
@@ -786,7 +770,7 @@ circle {
   }
 }
 @keyframes animCircle-22 {
-  0%,50%{
+  0%,20%{
     stroke-dashoffset: 400;
   }
   100% {
@@ -794,11 +778,27 @@ circle {
   }
 }
 @keyframes animCircle-23 {
-  0%,67%{
+  0%,30%{
     stroke-dashoffset: 400;
   }
   100% {
     stroke-dashoffset: 75; /* 91% changed*/
+  }
+}
+@keyframes shadowVis-2 {
+  0%,25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shadowVis-3 {
+  0%,45% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -1240,13 +1240,13 @@ input[type=number]::-webkit-outer-spin-button {
     r: 58px;
   }
   .circle-animate .circle-1 {
-    animation: animCircle-21 1s linear forwards;
+    animation: animCircle-21 .9s linear forwards;
   }
   .circle-animate .circle-2 {
-    animation: animCircle-22 2s linear forwards;
+    animation: animCircle-22 1.4s linear forwards;
   }
   .circle-animate .circle-3 {
-    animation: animCircle-23 3s linear forwards;
+    animation: animCircle-23 1.8s linear forwards;
   }
 }
 
