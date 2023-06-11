@@ -103,13 +103,13 @@
       }
       //if want to animation that repeats on scroll use this 
       
-      else if(top < offset || top > offset + height2) {
+    /*   else if(top < offset || top > offset + height2) {
         sec.classList.remove('show-animate');
               // AntiCircle1
         sec.classList.remove('circle-animate');
               // AntiHomeOpacity
         sec.classList.remove('home-Opacity');
-      }
+      } */
     });
 
     if (opaOnScroll.getAttribute('class') !== 'home show-animate home-Opacity') { 
@@ -170,7 +170,3 @@
       }
     }
   }
-
-
-
-
