@@ -29,6 +29,7 @@
     .light-theme {
     --bg-color: #f0eaea;
     --bg-color-2: #eddede;
+    --bg-color-3: #dacaca;
     --text-color: #12142c;
     --text-color-2: #2b678f; /** used by bx buttons */
     --gradient2: linear-gradient(#f2e9e9, #f2e9e9); /* projects & buttons background*/
@@ -38,6 +39,7 @@
     --bg-color: #000000;
     --bg-color-2-r: #12142c; /* original one */
     --bg-color-2: #1f2452;
+    --bg-color-3: #13183e;
     --text-color: #eddede;
     --text-color-2: white; /** used by bx buttons on hover*/
     --gradient2: linear-gradient(#000000, #000000); /* projects & buttons background*/
@@ -72,7 +74,7 @@
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    transition: 1s;
+    transition: .15s;
   }
   .header.sticky {
     background: var(--bg-color-2);
@@ -536,7 +538,7 @@
   flex-direction: column;
   min-height: auto;
   padding-bottom: 5rem;
-  background: var(--bg-color-2);
+  background: var(--bg-color-2); 
 }
 .education .education-row {
   display: flex;
@@ -579,6 +581,7 @@
   border: .2rem solid var(--main-color);
   border-radius: .6rem;
   margin-bottom: 2rem;
+  z-index: 0;
 }
 
 .education-content .content::before {
@@ -588,7 +591,7 @@
   left: 0;
   width: 0;
   height: 100%;
-  background: var(--bg-color-2);
+  background: var(--bg-color-3);
   overflow: hidden;
   z-index: -1;
   transition: .5s;
@@ -656,30 +659,40 @@
 .skill-box .skills-content {
   background: transparent;
   position: relative;
-  /*border: .2rem solid var(--main-color);*/
   border-radius: .6rem;
   padding: 1.5rem 1.5rem;
   z-index: 1;
   overflow: hidden;
   width: fit-content;
-}/*
-.skill-box .skills-content::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: var(--bg-color);
-  z-index: -1;
-  transition: .5s;
 }
-.skill-box .skills-content:hover::before {
-  width: 100%;
-} */
 .circle-container {
   position: relative;
-  /*background: yellowgreen;*/
+  opacity: 0;
+}
+.circle-animate .skils-column:nth-child(1) .circle-container {
+  opacity: 1;
+}
+.circle-animate .skils-column:nth-child(2) .circle-container {
+  animation: shadowVis-2 linear 2s forwards;
+}
+.circle-animate .skils-column:nth-child(3) .circle-container {
+  animation: shadowVis-2 linear 3s forwards;
+}
+@keyframes shadowVis-2 {
+  0%,50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shadowVis-3 {
+  0%,67% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .outer-circle {
   width: fit-content;
@@ -719,34 +732,28 @@ circle {
   r: 69px;
 }
 .circle-animate #number-circle1 {
-  animation: animNumb-1 3s linear forwards;
+  animation: animNumb-1 1s linear forwards;
 }
 .circle-animate #number-circle2 {
-  animation: animNumb-1 3.5s linear forwards;
+  animation: animNumb-1 2s linear forwards;
 }
 .circle-animate #number-circle3 {
-  animation: animNumb-1 4s linear forwards;
+  animation: animNumb-1 3s linear forwards;
 }
 
 
 .circle-animate .circle-1 {
-  animation: animCircle-1 3s linear forwards;
+  animation: animCircle-1 1s linear forwards;
 }
 .circle-animate .circle-2 {
-  animation: animCircle-2 3.5s linear forwards;
+  animation: animCircle-2 2s linear forwards;
 }
 .circle-animate .circle-3 {
-  animation: animCircle-3 4s linear forwards;
-}
-.circle-animate .circle-4 {
-  animation: animCircle-4 3s linear forwards;
-}
-.circle-animate .circle-5 {
-  animation: animCircle-5 3s linear forwards;
+  animation: animCircle-3 3s linear forwards;
 }
 /* take it down later*/
 @keyframes animCircle-1 {
-  0%,10%,30%{
+  0%,30%{
     stroke-dashoffset: 430;
   }
   100% {
@@ -754,7 +761,7 @@ circle {
   }
 }
 @keyframes animCircle-2 {
-  0%,40%{
+  0%,50%{
     stroke-dashoffset: 430;
   }
   100% {
@@ -762,11 +769,36 @@ circle {
   }
 }
 @keyframes animCircle-3 {
-  0%,50%{
+  0%,67%{
     stroke-dashoffset: 430;
   }
   100% {
     stroke-dashoffset: 38.7; /* 91% changed*/
+  }
+}
+
+@keyframes animCircle-21 {
+  0%,30%{
+    stroke-dashoffset: 400;
+  }
+  100% {
+    stroke-dashoffset: 60; /* 98%  changed*/
+  }
+}
+@keyframes animCircle-22 {
+  0%,50%{
+    stroke-dashoffset: 400;
+  }
+  100% {
+    stroke-dashoffset: 70; /* 93% changed*/
+  }
+}
+@keyframes animCircle-23 {
+  0%,67%{
+    stroke-dashoffset: 400;
+  }
+  100% {
+    stroke-dashoffset: 75; /* 91% changed*/
   }
 }
 
@@ -870,6 +902,11 @@ svg {
 
 .contact form .btn-box.btns .btn {
   cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 
 /**For spining sphere**/
@@ -1199,8 +1236,17 @@ svg {
     height: 100px;
   }
   circle {
-    stroke-dasharray: 360; /* changed */
+    stroke-dasharray: 400;
     r: 58px;
+  }
+  .circle-animate .circle-1 {
+    animation: animCircle-21 1s linear forwards;
+  }
+  .circle-animate .circle-2 {
+    animation: animCircle-22 2s linear forwards;
+  }
+  .circle-animate .circle-3 {
+    animation: animCircle-23 3s linear forwards;
   }
 }
 
