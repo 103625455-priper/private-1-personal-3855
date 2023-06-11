@@ -12,9 +12,6 @@
   border-bottom-left-radius: 1rem;
   transition: .25s;
 }
-.languageWidth {
-  width: 3.5rem;
-}
 .languagePop {
   animation: languagePop linear 5s forwards;
 }
@@ -41,6 +38,12 @@
 }
 .language:hover .ln-left {
   display: none;
+} 
+.languageUNHIDE {
+  width: 15rem !important;
+}
+.languageHIDE {
+  width: 3.5rem !important;
 }
 .ln-btns {
   display: flex;
@@ -56,6 +59,7 @@
   cursor: pointer;
   border-bottom: 0.1rem solid var(--main-color);
 }
+
 @keyframes languagePop {
   0%,50% {
     width: 3.5rem;
@@ -79,11 +83,6 @@
     opacity: 1;
   }
   95% {
-    width: 15rem;
-  }
-}
-@keyframes languagePop2 {
-  100% {
     width: 15rem;
   }
 }
