@@ -703,7 +703,7 @@
   /*background: red;*/
 }
 .inner-circle div {
-  visibility: hidden;
+  /* visibility: hidden; */
   font-size: 2.5rem;
   color: var(--text-color1);
 }
@@ -715,6 +715,7 @@ circle {
   stroke-dashoffset: 430;
   r: 69px;
 }
+/*
 .circle-animate #number-circle1 {
   animation: animNumb-1 .9s linear forwards;
 }
@@ -723,7 +724,7 @@ circle {
 }
 .circle-animate #number-circle3 {
   animation: animNumb-1 1.8s linear forwards;
-}
+} */
 
 
 .circle-animate .circle-1 {
