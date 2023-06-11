@@ -1,8 +1,30 @@
  
- // animate language btns and set timeout
+ // animate language btns on click
  const langAnim = document.querySelector(".language");
+ const langRight = document.querySelector(".ln-right");
+ const langLeft = document.querySelector(".ln-left");
 
+ let langIndex = 0;
+ langRight.addEventListener("click", () => { languageHide()});
+ langLeft.addEventListener("click", () => {languageHide()});
 
+function languageHide() {
+
+  if (langIndex == 0) {
+    langAnim.classList.remove("languageHIDE");
+    langAnim.classList.add("languageUNHIDE");
+    langRight.style.display = "inline-block";
+    langLeft.style.display = "none";
+    langIndex = 1;
+    return;
+  } else if (langIndex == 1) {
+    langAnim.classList.remove("languageUNHIDE");
+    langAnim.classList.add("languageHIDE");
+    langRight.style.display = "none";
+    langLeft.style.display = "inline-block";
+    langIndex = 0;
+  }
+};
  
 
  // use user language
@@ -51,6 +73,7 @@ document.querySelector(".tr-ho-4").innerText = `Web sitenizin fikirlerini hayata
 document.querySelector(".resume").innerText = "Özgeçmişim";
 document.querySelector(".talk").innerText = "Konuşalım";
 
+
 // <!--about section design-->
 document.querySelector(".about .heading").innerHTML = `Hakkımda<span>.</span>
 <span class="animate scroll" style="--i: 1"></span>`;
@@ -67,8 +90,8 @@ geliştirdim.
 
 document.querySelector(".btns .btn").innerHTML = "Devamını oku";
 
-// <!--Some of my Interviews-->
 
+// <!--Some of my Interviews-->
 document.querySelector(".interviews .heading").innerHTML = `<span>Röportajlarım</span>
 <span class="animate scroll" style="--i: 1"></span>`; 
 
@@ -84,8 +107,8 @@ document.querySelector(".in-txt-3").innerHTML = `<h1><span>Ashruka Channel</span
 document.querySelector(".in-txt-4").innerHTML = `<h1><span>Minber TV</span><br />437K Abone</h1>
 <p>1.9K Görüntüleme</p>`; 
 
-// <!--education section design-->
 
+// <!--education section design-->
 document.querySelector(".education .heading").innerHTML = `Yolculuğum <span>.</span
 ><span class="animate scroll" style="--i: 1"></span>`; 
 document.querySelector(".education-row .tr-ed-1").innerHTML = `Eğitim<span class="animate scroll" style="--i: 2"></span>`; 
@@ -130,12 +153,13 @@ geliştirme becerilerine sahibim.`;
 // <!--skills section design-->
 document.querySelector(".skills .heading").innerHTML = `<span>Becerilerim</span
 ><span class="animate scroll" style="--i: 1"></span>`;
-document.querySelector(".testimonials").innerHTML = `Görüşler<span class="animate scroll" style="--i: 7"></span>`;
+document.querySelector(".testimonials").innerHTML = `Görüşler<span class="animate scroll" style="--i: 9.5"></span>`;
 document.querySelector(".tr-te-1").innerHTML = `Bundan sonra büyük başarılara ulaşacağınızı ve tekrar
 görüşeceğimizi umarım.`;
 document.querySelector(".tr-te-2").innerHTML = `Güçlü kal. İstediğin zaman, benimle iletişime geçebilirsin.`;
 document.querySelector(".tr-te-3").innerHTML = `Dronlarda "Etiyopya'da Üretildi" yazısını görene kadar
 durmayacağınızı biliyorum.`;
+
 
 //  <!--Projects Section-->
 document.querySelector(".projects .heading").innerHTML = `Projelerim<span>.</span
@@ -169,6 +193,7 @@ charges in-flight through flexible collectors on its wings.-->
   >Devamını Gör</a
 >`;
 
+
 //   <!--contact section design-->
 document.querySelector(".contact .heading").innerHTML = `Benimle İletişime <span>Geçin!</span
 ><span class="animate scroll" style="--i: 1"></span>`;
@@ -182,8 +207,10 @@ document.querySelector(".tr-co-2").innerHTML = `Teşekkürler!`;
 document.querySelector(".tr-co-3").innerHTML = `Mesajınız başarıyla gönderildi.`;
 document.querySelector(".tr-co-4").innerHTML = `Tamam`;
 
+
 // <!-- footer design-->
 document.querySelector(".tr-fo-1").innerHTML = `Telif Hakkı &copy; 2023 İbrahim Ali tarafından | Tüm Hakları Saklıdır.`;
 
+window.location.replace("https://www.ibrahimali.net");
 languageSave = localStorage.getItem("language");
 };
