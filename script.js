@@ -72,7 +72,7 @@
 
 
 
-
+  let numbersAddAVar = false;
   window.onscroll = () => {
     sections.forEach(sec =>  {
       let top = window.scrollY;
@@ -94,6 +94,11 @@
         sec.classList.add('show-animate');
         if (id === 'skills') {
           sec.classList.add('circle-animate');
+
+          if (numbersAddAVar == false) {
+            numbersAdd();
+            numbersAddAVar = true;
+          }
         }
 
         if (id === 'home') {
@@ -140,7 +145,38 @@
   };
 
  
-  
+  function numbersAdd() {
+    let numberC1 = 0;
+    let numberC2 = 1;
+    let numberC3 = 1;
+
+    setInterval(() => {
+      if (numberC1 <= 98) {
+        document.getElementById("number-circle1").innerHTML = numberC1 + "%";
+        numberC1 +=2;
+      } 
+    },20);
+
+    setTimeout(() => {
+      setInterval(() => {
+        if (numberC2 <= 93) {
+          document.getElementById("number-circle2").innerHTML = numberC2 + "%";
+          numberC2 +=2;
+        } 
+      },25);
+    }, 350);
+
+
+    setTimeout(() => {
+      setInterval(() => {
+        if (numberC3 <= 91) {
+          document.getElementById("number-circle3").innerHTML = numberC3 + "%";
+          numberC3 +=2;
+        } 
+      },30);
+    },540);
+
+  }
 
   function startSlide() {
 
@@ -170,3 +206,4 @@
       }
     }
   }
+
